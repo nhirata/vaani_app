@@ -2,12 +2,24 @@
 <html>
   <head>
     <title>Vaani</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
-    <meta charset="utf-8" />
-    <meta name="theme-color" content="#fff" />
-    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <script src="index.js"></script>
+    <p>Packaged app installation page</p>
+    <script>
+      function installAsApp() {
+          var manifestUrl = 'http://nhirata.github.io/vaani_app/manifest.webapp';
+          var request = navigator.mozApps.installPackage(manifestUrl);request.onsuccess = function(e) {
+          console.log('Installed successfully');
+        };
+       request.onerror = function(err) {
+          console.log('Error: ' + err.target.error.name);
+       };
+     }
+    </script>
+    <div>
+      <h3>Install as App</h3>
+      <input id="installApp" type="button" value="Install" onclick="installAsApp();" />
+    </div>
+
   </body>
 </html>
