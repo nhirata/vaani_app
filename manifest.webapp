@@ -1,6 +1,6 @@
 {
   "name": "Vaani",
-  "package_path" : "http://nhirata.github.io/vaani_app/vaani.zip"
+  "package_path" : "http://nhirata.github.io/vaani_app/vaani.zip",
   "description": "Firefox OS Speech Recognition Assistant",
   "version": "0.1a",
   "developer": {
